@@ -12,9 +12,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - name: Run gh command
+      - name: Run gh version
         run: |
           gh --version
 
-
+      - name: Create pull request
+        run: |
+          gh pr create --base release --title "To Release" --body "This is PR for release branch" --assignee "@n0ts"
 
