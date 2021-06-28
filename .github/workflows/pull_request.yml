@@ -24,10 +24,13 @@ jobs:
 
       - name: Create pull request
         run: |-
+          echo '--- PR to main ---'
           gh pr list \
             --base main
+          echo '--- PR to release ---'
           gh pr list \
             --base release
+          echo '--- create PR ---'
           gh pr create \
             --base release \
             --title "To Release" \
