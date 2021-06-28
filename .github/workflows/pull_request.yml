@@ -27,9 +27,11 @@ jobs:
           echo '--- PR to main ---'
           gh pr list \
             --base main
+          echo $?
           echo '--- PR to release ---'
           gh pr list \
             --base release
+          echo $?
           echo '--- create PR ---'
           gh pr create \
             --base release \
