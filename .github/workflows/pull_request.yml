@@ -24,7 +24,7 @@ jobs:
 
       - name: Create pull request
         run: |-
-          gh pr create \
+          DEBUG=api gh pr create \
             --fill \
             --base release \
             --title "To Release" \
