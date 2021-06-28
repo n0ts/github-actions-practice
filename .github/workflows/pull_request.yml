@@ -16,6 +16,10 @@ jobs:
         run: |
           gh --version
 
+      - name: Run auth login
+        run: |
+          gh auth login --with-token < ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create pull request
         run: |
           gh pr create --base release --title "To Release" --body "This is PR for release branch" --assignee "@n0ts"
