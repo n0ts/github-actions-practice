@@ -1,0 +1,15 @@
+name: Push
+
+on:
+  push:
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: echo
+        run: echo 
